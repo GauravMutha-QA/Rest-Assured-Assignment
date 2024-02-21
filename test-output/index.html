@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,11 +21,12 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +39,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-Positive_Tests_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Positive Tests Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-Positive_Tests_Suite" class="navigator-link ">
+                    <span>testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-Positive_Tests_Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-Positive_Tests_Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Positive_Tests_Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Positive_Tests_Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Positive_Tests_Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Positive_Tests_Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,21 +93,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 3 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Positive_Tests_Suite" class="hide-methods failed suite-Positive_Tests_Suite"> (hide)</a> <!-- hide-methods failed suite-Positive_Tests_Suite -->
+                      <a href="#" panel-name="suite-Positive_Tests_Suite" class="show-methods failed suite-Positive_Tests_Suite"> (show)</a> <!-- show-methods failed suite-Positive_Tests_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Positive_Tests_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Positive_Tests_Suite" title="com.herokuapp.restfulbookerassignment.CreateBookingTests" class="method navigator-link" hash-for-method="createBookingTest">createBookingTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Positive_Tests_Suite" title="com.herokuapp.restfulbookerassignment.GetBookingTests" class="method navigator-link" hash-for-method="getBookingTest">getBookingTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Positive_Tests_Suite" title="com.herokuapp.restfulbookerassignment.PartialUpdateBookingTests" class="method navigator-link" hash-for-method="partialUpdateBookingTest">partialUpdateBookingTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Positive_Tests_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Positive_Tests_Suite" class="hide-methods passed suite-Positive_Tests_Suite"> (hide)</a> <!-- hide-methods passed suite-Positive_Tests_Suite -->
+                      <a href="#" panel-name="suite-Positive_Tests_Suite" class="show-methods passed suite-Positive_Tests_Suite"> (show)</a> <!-- show-methods passed suite-Positive_Tests_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-Positive_Tests_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.herokuapp.restfulbookerassignment.UpdateBookingTests" class="method navigator-link" hash-for-method="createBookingTest">createBookingTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Positive_Tests_Suite" title="com.herokuapp.restfulbookerassignment.UpdateBookingTests" class="method navigator-link" hash-for-method="createBookingTest">createBookingTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Positive_Tests_Suite" title="com.herokuapp.restfulbookerassignment.DeleteBookingTests" class="method navigator-link" hash-for-method="partialUpdateBookingTest">partialUpdateBookingTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Positive_Tests_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,8 +147,84 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Positive_Tests_Suite" class="panel Positive_Tests_Suite">
+          <div class="suite-Positive_Tests_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.herokuapp.restfulbookerassignment.CreateBookingTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createBookingTest">
+                  </a> <!-- createBookingTest -->
+                  <span class="method-name">createBookingTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	firstname in response is not expected expected [Anuj] but found [Vijay],
+	lastname in response is not expected expected [Kumar] but found [Singhal],
+	totalprice in response is not expected expected [150] but found [543],
+	checkin response is not expected expected [2020-03-25] but found [2024-09-08],
+	checkin response is not expected expected [2020-03-27] but found [2024-09-10],
+	additional needs in repsonse is not expected expected [Breakfast] but found [dryer]
+	at com.herokuapp.restfulbookerassignment.CreateBookingTests.createBookingTest(CreateBookingTests.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Tests_Suite-class-failed -->
+          <div class="suite-Positive_Tests_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.herokuapp.restfulbookerassignment.PartialUpdateBookingTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="partialUpdateBookingTest">
+                  </a> <!-- partialUpdateBookingTest -->
+                  <span class="method-name">partialUpdateBookingTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	lastname in response is not expected expected [Shyshkin] but found [Singhal],
+	totalprice in response is not expected expected [150] but found [543],
+	additional needs in repsonse is not expected expected [breakfast] but found [dryer]
+	at com.herokuapp.restfulbookerassignment.PartialUpdateBookingTests.partialUpdateBookingTest(PartialUpdateBookingTests.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Tests_Suite-class-failed -->
+          <div class="suite-Positive_Tests_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.herokuapp.restfulbookerassignment.GetBookingTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getBookingTest">
+                  </a> <!-- getBookingTest -->
+                  <span class="method-name">getBookingTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	firstname in response is not expected expected [Eric] but found [Vijay],
+	lastname in response is not expected expected [Brown] but found [Singhal],
+	totalprice in response is not expected expected [140] but found [543],
+	depositpaid should be true but it is not expected [true] but found [false],
+	checkin response is not expected expected [2019-05-29] but found [2024-09-08],
+	checkin response is not expected expected [2020-03-04] but found [2024-09-10],
+	additional needs in repsonse is not expected expected [Breakfast] but found [dryer]
+	at com.herokuapp.restfulbookerassignment.GetBookingTests.getBookingTest(GetBookingTests.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Tests_Suite-class-failed -->
+          <div class="suite-Positive_Tests_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.herokuapp.restfulbookerassignment.UpdateBookingTests</span>
@@ -132,102 +238,187 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Positive_Tests_Suite-class-passed -->
+          <div class="suite-Positive_Tests_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.herokuapp.restfulbookerassignment.DeleteBookingTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="partialUpdateBookingTest">
+                  </a> <!-- partialUpdateBookingTest -->
+                  <span class="method-name">partialUpdateBookingTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Positive_Tests_Suite-class-passed -->
+        </div> <!-- panel Positive_Tests_Suite -->
+        <div panel-name="test-xml-Positive_Tests_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--1613966892/testng-customsuite.xml</span>
+            <span class="header-content">/home/gaurav/eclipse-workspace/resta_assignment/src/test/resources/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;Positive Tests Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Positive Tests&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.herokuapp.restfulbookerassignment.CreateBookingTests&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.restfulbookerassignment.GetBookingTests&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.restfulbookerassignment.PartialUpdateBookingTests&quot;/&gt;
       &lt;class name=&quot;com.herokuapp.restfulbookerassignment.UpdateBookingTests&quot;/&gt;
+      &lt;class name=&quot;com.herokuapp.restfulbookerassignment.DeleteBookingTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Positive Tests --&gt;
+&lt;/suite&gt; &lt;!-- Positive Tests Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Positive_Tests_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Positive Tests Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Positive Tests (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Positive_Tests_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Positive Tests Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Positive_Tests_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Positive Tests Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Positive_Tests_Suite');
+function tableData_Positive_Tests_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createBookingTest')
-data.setCell(0, 2, 'com.herokuapp.restfulbookerassignment.UpdateBookingTests')
-data.setCell(0, 3, 4632);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'partialUpdateBookingTest')
+data.setCell(0, 2, 'com.herokuapp.restfulbookerassignment.DeleteBookingTests')
+data.setCell(0, 3, 3704);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'createBookingTest')
+data.setCell(1, 2, 'com.herokuapp.restfulbookerassignment.CreateBookingTests')
+data.setCell(1, 3, 3119);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'partialUpdateBookingTest')
+data.setCell(2, 2, 'com.herokuapp.restfulbookerassignment.PartialUpdateBookingTests')
+data.setCell(2, 3, 2171);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'getBookingTest')
+data.setCell(3, 2, 'com.herokuapp.restfulbookerassignment.GetBookingTests')
+data.setCell(3, 3, 1896);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'createBookingTest')
+data.setCell(4, 2, 'com.herokuapp.restfulbookerassignment.UpdateBookingTests')
+data.setCell(4, 3, 1723);
+window.suiteTableData['Positive_Tests_Suite']= { tableData: data, tableDiv: 'times-div-Positive_Tests_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <div id="times-div-Positive_Tests_Suite">
+              </div> <!-- times-div-Positive_Tests_Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Positive_Tests_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Positive Tests Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Positive_Tests_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Positive_Tests_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.herokuapp.restfulbookerassignment.UpdateBookingTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.herokuapp.restfulbookerassignment.CreateBookingTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">createBookingTest</span>
-                <span class="method-start">314 ms</span>
+                <span class="method-start">333 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.restfulbookerassignment.GetBookingTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">3456 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">getBookingTest</span>
+                <span class="method-start">3457 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.restfulbookerassignment.PartialUpdateBookingTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">5354 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">partialUpdateBookingTest</span>
+                <span class="method-start">5355 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.restfulbookerassignment.UpdateBookingTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">7527 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createBookingTest</span>
+                <span class="method-start">7528 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.herokuapp.restfulbookerassignment.DeleteBookingTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">9252 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">partialUpdateBookingTest</span>
+                <span class="method-start">9253 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

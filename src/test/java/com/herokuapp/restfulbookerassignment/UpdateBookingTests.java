@@ -13,13 +13,10 @@ public class UpdateBookingTests extends BaseTest{
 	
 	@Test
 	public void createBookingTest() {
-		//create booking
-		Response responseCreate = createBooking();
+		//getting booking id from single source
+		int bookingid = SharedData.bookingid;
 		
-		responseCreate.print();
-		int bookingId=responseCreate.jsonPath().getInt("bookingid");
-		
-		//update booking
+		//making an all new json object to replace
 		JSONObject body = new JSONObject();
 		body.put("firstname","Nikhil");
 		body.put("lastname","Chauhan");
@@ -34,14 +31,16 @@ public class UpdateBookingTests extends BaseTest{
 		
 		body.put("additionalneeds","breakfast");
 		
-		Response responseUpdate=RestAssured.given().auth().preemptive().basic("admin", "password123").contentType(ContentType.JSON).body(body.toString()).put("https://restful-booker.herokuapp.com/booking/"+bookingId);
+		//sending the put request
+		Response responseUpdate=RestAssured.given().auth().preemptive().basic("admin", "password123").contentType(ContentType.JSON).body(body.toString()).put("https://restful-booker.herokuapp.com/booking/"+bookingid);
 		responseUpdate.print();
 		
-		//verification
+		//verification of status code
 		Assert.assertEquals(responseUpdate.getStatusCode(), 200,"Status code should be 200 but it is not");
 		
 		SoftAssert softAssert=new SoftAssert();
 		
+		//verifying fields
 		String actualFirstName= responseUpdate.jsonPath().getString("firstname");
 		softAssert.assertEquals(actualFirstName, "Nikhil","firstname in response is not expected");
 		

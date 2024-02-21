@@ -13,13 +13,11 @@ public class PartialUpdateBookingTests extends BaseTest{
 	
 	@Test
 	public void partialUpdateBookingTest() {
-		//create booking
-		Response responseCreate = createBooking();
 		
-		responseCreate.print();
-		int bookingId=responseCreate.jsonPath().getInt("bookingid");
+		//getting booking id from single source
+		int bookingid = SharedData.bookingid;
 		
-		//update booking
+		//partially updating object
 		JSONObject body = new JSONObject();
 		body.put("firstname","Olga");
 		
@@ -28,15 +26,16 @@ public class PartialUpdateBookingTests extends BaseTest{
 		bookingdates.put("checkout","2020-04-27");
 		body.put("bookingdates", bookingdates);
 		
-		
-		Response responseUpdate=RestAssured.given(spec).auth().preemptive().basic("admin", "password123").contentType(ContentType.JSON).body(body.toString()).patch("/booking/"+bookingId);
+		//sending patch request
+		Response responseUpdate=RestAssured.given(spec).auth().preemptive().basic("admin", "password123").contentType(ContentType.JSON).body(body.toString()).patch("/booking/"+bookingid);
 		responseUpdate.print();
 		
-		//verification
+		//verification of status code
 		Assert.assertEquals(responseUpdate.getStatusCode(), 200,"Status code should be 200 but it is not");
 		
 		SoftAssert softAssert=new SoftAssert();
 		
+		//verifying fields
 		String actualFirstName= responseUpdate.jsonPath().getString("firstname");
 		softAssert.assertEquals(actualFirstName, "Olga","firstname in response is not expected");
 		

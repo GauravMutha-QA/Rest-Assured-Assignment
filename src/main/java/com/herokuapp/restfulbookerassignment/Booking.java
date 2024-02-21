@@ -7,9 +7,11 @@ public class Booking {
 	private boolean depositpaid;
 	private Bookingdates bookingdates;
 	private String additionalneeds;
-
+	
+	//constructor
 	public Booking(String firstname, String lastname, int totalprice, boolean depositpaid, Bookingdates bookingdates,
 			String additionalneeds) {
+		System.out.println("Hello!");
 
 		this.firstname = firstname;
 		this.lastname = lastname;
