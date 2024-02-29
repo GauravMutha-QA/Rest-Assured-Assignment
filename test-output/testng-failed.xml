@@ -2,25 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Positive Tests Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Positive Tests(failed)">
+    <groups>
+      <run>
+        <include name="negativeTests"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.herokuapp.restfulbookerassignment.CreateBookingTests">
-        <methods>
-          <include name="createBookingTest"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.herokuapp.restfulbookerassignment.CreateBookingTests -->
       <class name="com.herokuapp.restfulbookerassignment.PartialUpdateBookingTests">
         <methods>
-          <include name="partialUpdateBookingTest"/>
-          <include name="setUp"/>
+          <include name="partialUpdateBookingTestNegative"/>
         </methods>
       </class> <!-- com.herokuapp.restfulbookerassignment.PartialUpdateBookingTests -->
-      <class name="com.herokuapp.restfulbookerassignment.GetBookingTests">
-        <methods>
-          <include name="getBookingTest"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.herokuapp.restfulbookerassignment.GetBookingTests -->
     </classes>
   </test> <!-- Positive Tests(failed) -->
 </suite> <!-- Failed suite [Positive Tests Suite] -->

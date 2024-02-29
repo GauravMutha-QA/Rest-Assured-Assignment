@@ -1,6 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Positive Tests Suite">
 	<test name="Positive Tests">
+		<groups>
+			<run>
+				<exclude name="negativeTests"/>
+			</run>
+		</groups>
 		<classes>
 			<class
 				name="com.herokuapp.restfulbookerassignment.CreateBookingTests" />
@@ -14,22 +19,3 @@
 		</classes>
 	</test>
 </suite>
-
-<!--for possible addition of negative testing-->
-<!--<suite name="Negative Tests Suite">
-	<test name="Negative Tests">
-		<groups>
-			<run>
-				<include name="negativeTests" />
-			</run>
-		</groups>
-		<classes>
-			<class
-				name="com.herokuapp.restfulbookerassignment.CreateBookingTests">
-				<methods>
-					<include name="createBookingNegative" />
-				</methods>
-			</class>
-		</classes>
-	</test>
-</suite>-->

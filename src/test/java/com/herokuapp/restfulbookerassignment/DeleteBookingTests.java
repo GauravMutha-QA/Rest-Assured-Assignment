@@ -23,11 +23,11 @@ public class DeleteBookingTests extends BaseTest{
 		Assert.assertEquals(responseDelete.getStatusCode(), 201,"Status code should be 201 but it is not");
 		
 		//sending get request
-		Response responseGet=RestAssured.get("https://restful-booker.herokuapp.com/booking/4694");
+		Response responseGet=RestAssured.get("https://restful-booker.herokuapp.com/booking/"+bookingid);
 		responseGet.print();
 		
 		//verifying the text response for the successful deletion
-		Assert.assertEquals(responseGet.getBody().asString(), "Not Found","Body should not be 'Not Found' but it is not");
+		Assert.assertEquals(responseGet.getBody().asString(), "Not Found","Body should be 'Not Found' but it is not");
 		
 		
 	
